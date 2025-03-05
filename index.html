@@ -16,5 +16,96 @@
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="form-steps-container">
+        <div class="step one">
+          <form action="">
+            <fieldset>
+              <legend>Register</legend>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Example@gmail.com"
+                  required
+                />
+              </div>
+            </fieldset>
+            <button class="continue-btn" type="button">Continue</button>
+          </form>
+        </div>
+        <div class="step two">
+          <form action="">
+            <fieldset>
+              <legend>Which topics you are interested in?</legend>
+              <div class="form-group">
+                <label for="software-development">Software Development</label>
+                <input
+                  type="checkbox"
+                  id="software-development"
+                  name="software-development"
+                />
+                <label for="user-experience">User Experience</label>
+                <input
+                  type="checkbox"
+                  id="user-experience"
+                  name="user-experience"
+                />
+                <label for="graphic-design">Graphic Design</label>
+                <input
+                  type="checkbox"
+                  id="graphic-design"
+                  name="graphic-design"
+                />
+              </div>
+            </fieldset>
+            <button class="continue-btn" type="button">Continue</button>
+          </form>
+        </div>
+        <div class="step three">
+          <div class="summary-container">
+            <h2>Summary</h2>
+            <div class="summary">
+              <p>
+                <strong>Name:</strong>
+                <span id="summary-name">Emily Johnson</span>
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <span id="summary-email">emily@emilyjohnsonstl.com</span>
+              </p>
+              <p>
+                <strong>Topics:</strong>
+              </p>
+              <ul>
+                <li id="summary-topic">User Experience</li>
+                <li id="summary-topic">Graphic Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="current-step-container">
+        <p>Step <span id="current-step"></span> of 3</p>
+        <div class="steps-circles">
+          <div class="step-circle one"></div>
+          <div class="step-circle two"></div>
+          <div class="step-circle three"></div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
