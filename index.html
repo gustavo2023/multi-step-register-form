@@ -14,97 +14,97 @@
     <title>Multi-step Register Form | devChallenges.io</title>
 
     <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <script defer src="script.js"></script>
   </head>
   <body>
     <main>
-      <div class="form-steps-container">
-        <div class="step one">
-          <form action="">
-            <fieldset>
-              <legend>Register</legend>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Example@gmail.com"
-                  required
-                />
-              </div>
-            </fieldset>
-            <button class="continue-btn" type="button">Continue</button>
-          </form>
-        </div>
-        <div class="step two">
-          <form action="">
-            <fieldset>
-              <legend>Which topics you are interested in?</legend>
-              <div class="form-group">
-                <label for="software-development">Software Development</label>
-                <input
-                  type="checkbox"
-                  id="software-development"
-                  name="software-development"
-                />
-                <label for="user-experience">User Experience</label>
-                <input
-                  type="checkbox"
-                  id="user-experience"
-                  name="user-experience"
-                />
-                <label for="graphic-design">Graphic Design</label>
-                <input
-                  type="checkbox"
-                  id="graphic-design"
-                  name="graphic-design"
-                />
-              </div>
-            </fieldset>
-            <button class="continue-btn" type="button">Continue</button>
-          </form>
-        </div>
-        <div class="step three">
-          <div class="summary-container">
-            <h2>Summary</h2>
-            <div class="summary">
-              <p>
-                <strong>Name:</strong>
-                <span id="summary-name">Emily Johnson</span>
-              </p>
-              <p>
-                <strong>Email:</strong>
-                <span id="summary-email">emily@emilyjohnsonstl.com</span>
-              </p>
-              <p>
-                <strong>Topics:</strong>
-              </p>
-              <ul>
-                <li id="summary-topic">User Experience</li>
-                <li id="summary-topic">Graphic Design</li>
-              </ul>
+      <form action="">
+        <div class="step-one">
+          <h2>Register</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Example@gmail.com"
+                required
+              />
             </div>
           </div>
         </div>
-      </div>
-      <div class="current-step-container">
-        <p>Step <span id="current-step"></span> of 3</p>
-        <div class="steps-circles">
-          <div class="step-circle one"></div>
-          <div class="step-circle two"></div>
-          <div class="step-circle three"></div>
+        <div class="step-two">
+          <h2>Which topics you are interested in?</h2>
+          <div class="topics-container">
+            <div class="topic-box">
+              <label for="software-development">Software Development</label>
+              <input
+                type="checkbox"
+                id="software-development"
+                name="software-development"
+              />
+            </div>
+            <div class="topic-box">
+              <label for="user-experience">User Experience</label>
+              <input
+                type="checkbox"
+                id="user-experience"
+                name="user-experience"
+              />
+            </div>
+            <div class="topic-box">
+              <label for="graphic-desing">Graphic Design</label>
+              <input
+                type="checkbox"
+                id="graphic-desing"
+                name="graphic-desing"
+              />
+            </div>
+          </div>
         </div>
+        <div class="step-three">
+          <h2>Summary</h2>
+          <div class="user-info">
+            <p class="user-name">Name: <span id="user-name"></span></p>
+            <p class="user-email">Email: <span id="user-email"></span></p>
+          </div>
+          <div class="user-topics">
+            <p>Topics:</p>
+            <ul class="user-topic-list"></ul>
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="button" class="continue-btn">Continue</button>
+        </div>
+      </form>
+      <div class="steps-container">
+        <div class="steps-text">
+          <p>Step <span id="current-step"></span> of 3</p>
+        </div>
+      </div>
+      <div class="steps-circles">
+        <div class="step" id="step-one"></div>
+        <div class="step" id="step-two"></div>
+        <div class="step" id="step-three"></div>
       </div>
     </main>
   </body>
