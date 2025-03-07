@@ -96,7 +96,7 @@ textarea:not([rows]) {
   --dark-gray-two: #394150;
   --medium-gray: #4d5562;
   --light-gray-one: #a1a1a9;
-  --light-gray-two: #845eee4d;
+  --light-gray-two: #d3cff3;
   --light-gray-three: #e5e7eb;
 
   /* Typography */
@@ -107,10 +107,85 @@ textarea:not([rows]) {
 }
 
 body {
-  background-color: var(--dark-blue);
+  background-image: linear-gradient(
+    45deg,
+    hsl(251deg 49% 23%) 0%,
+    hsl(249deg 47% 22%) 10%,
+    hsl(247deg 45% 21%) 20%,
+    hsl(245deg 43% 19%) 30%,
+    hsl(243deg 40% 18%) 40%,
+    hsl(242deg 37% 16%) 50%,
+    hsl(236deg 38% 15%) 60%,
+    hsl(231deg 40% 14%) 70%,
+    hsl(227deg 40% 13%) 80%,
+    hsl(224deg 39% 12%) 90%,
+    hsl(222deg 36% 11%) 100%
+  );
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+form {
+  display: flex;
+  background-color: var(--dark-gray-one);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--dark-gray-two);
+  border-radius: 0.5rem;
+}
+
+.step {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.step.two,
+.step.three {
+  display: none;
+}
+
+h2 {
+  color: var(--light-gray-three);
+  font-size: var(--heading-size);
+  font-weight: 400;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  color: var(--light-gray-two);
+  font-size: var(--tab-text-size);
+  font-weight: 300;
 }
