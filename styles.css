@@ -109,17 +109,17 @@ textarea:not([rows]) {
 body {
   background-image: linear-gradient(
     45deg,
-    hsl(251deg 49% 23%) 0%,
-    hsl(249deg 47% 22%) 10%,
-    hsl(247deg 45% 21%) 20%,
-    hsl(245deg 43% 19%) 30%,
-    hsl(243deg 40% 18%) 40%,
-    hsl(242deg 37% 16%) 50%,
-    hsl(236deg 38% 15%) 60%,
-    hsl(231deg 40% 14%) 70%,
-    hsl(227deg 40% 13%) 80%,
-    hsl(224deg 39% 12%) 90%,
-    hsl(222deg 36% 11%) 100%
+    hsl(241, 35%, 18%) 0%,
+    hsl(240, 32%, 17%) 10%,
+    hsl(235, 30%, 16%) 20%,
+    hsl(230, 28%, 15%) 30%,
+    hsl(225, 26%, 14%) 40%,
+    hsl(220, 25%, 13%) 50%,
+    hsl(220, 24%, 12%) 60%,
+    hsl(220, 23%, 12%) 70%,
+    hsl(218, 22%, 11%) 80%,
+    hsl(215, 20%, 10%) 90%,
+    hsl(212, 19%, 9%) 100%
   );
   font-family: "Inter", sans-serif;
   display: flex;
@@ -133,7 +133,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem 1rem;
   width: 100%;
   max-width: 800px;
@@ -145,12 +145,12 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem 1rem;
   width: 100%;
   max-width: 400px;
   border: 1px solid var(--dark-gray-two);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
 }
 
 .step {
@@ -161,7 +161,7 @@ form {
   gap: 2.5rem;
 }
 
-.step.two,
+.step.one,
 .step.three {
   display: none;
 }
@@ -181,11 +181,123 @@ h2 {
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 
 .input-group label {
   color: var(--light-gray-two);
   font-size: var(--tab-text-size);
   font-weight: 300;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"] {
+  background-color: var(--dark-gray-one);
+  color: var(--light-gray-three);
+  font-size: var(--tab-text-size);
+  padding: 1rem 1rem;
+  border: 2px solid var(--dark-gray-two);
+  border-radius: 0.6rem;
+}
+
+.input-group input[type="text"]::placeholder,
+.input-group input[type="email"]::placeholder {
+  color: var(--light-gray-two);
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus {
+  outline: 2px solid var(--light-gray-two);
+}
+
+.topics-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0.8rem;
+}
+
+.topic-box {
+  position: relative;
+  width: 100%;
+}
+
+.topic-box input[type="checkbox"] {
+  display: none;
+}
+
+.topic-box label {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  background-color: var(--dark-gray-two);
+  color: var(--light-gray-two);
+  font-size: var(--body-text-size);
+  font-weight: 300;
+  padding: 1em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.topic-box input[type="checkbox"]:checked + label {
+  background-color: var(--dark-purple);
+  color: var(--light-gray-three);
+}
+
+.continue-btn {
+  min-width: 9.5rem;
+  min-height: 3rem;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(180deg, var(--light-purple) 0%, #652cd1 100%);
+  color: var(--light-gray-three);
+  font-size: var(--tab-text-size);
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.steps-text p {
+  color: var(--light-gray-one);
+  font-size: var(--tab-text-size);
+  font-weight: 300;
+}
+
+.steps-circles {
+  display: flex;
+  gap: 1rem;
+}
+
+.step-circle {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background-color: var(--dark-gray-two);
+}
+
+.active-circle {
+  background-color: var(--light-purple);
+  position: relative;
+}
+
+.active-circle::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--dark-gray-two);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
