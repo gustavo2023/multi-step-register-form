@@ -162,7 +162,7 @@ form {
 }
 
 .step.one,
-.step.three {
+.step.two {
   display: none;
 }
 
@@ -170,6 +170,7 @@ h2 {
   color: var(--light-gray-three);
   font-size: var(--heading-size);
   font-weight: 400;
+  margin-left: 1rem;
 }
 
 .inputs-container {
@@ -231,7 +232,6 @@ h2 {
 .topic-box label {
   display: flex;
   gap: 1rem;
-  width: 100%;
   background-color: var(--dark-gray-two);
   color: var(--light-gray-two);
   font-size: var(--body-text-size);
@@ -243,6 +243,42 @@ h2 {
 
 .topic-box input[type="checkbox"]:checked + label {
   background-color: var(--dark-purple);
+  color: var(--light-gray-three);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  font-size: var(--body-text-size);
+}
+
+.user-name,
+.user-email {
+  color: var(--light-gray-one);
+}
+
+.user-name span,
+.user-email span {
+  color: var(--light-gray-three);
+}
+.user-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.user-topics p {
+  color: var(--light-gray-one);
+}
+
+.user-topic-list {
+  margin-left: 1.5rem;
+}
+
+.user-topic-list li {
   color: var(--light-gray-three);
 }
 
