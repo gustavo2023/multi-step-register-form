@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- Add a meta description -->
+    <meta
+      name="description"
+      content="A multi-step registration form that collects user data including name, email, and selected topics of interest."
+    />
     <link
       rel="icon"
       href="resources/favicon.ico"
       type="image/x-icon"
       sizes="96x96"
     />
-
     <title>Multi-step Register Form | devChallenges.io</title>
-
     <link rel="stylesheet" href="styles.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -101,9 +101,21 @@
           <p>Step <span id="current-step"></span> of 3</p>
         </div>
         <div class="steps-circles">
-          <button class="step-circle" id="step-one"></button>
-          <button class="step-circle" id="step-two"></button>
-          <button class="step-circle" id="step-three"></button>
+          <button
+            class="step-circle"
+            id="step-one"
+            aria-label="Step one"
+          ></button>
+          <button
+            class="step-circle"
+            id="step-two"
+            aria-label="Step two"
+          ></button>
+          <button
+            class="step-circle"
+            id="step-three"
+            aria-label="Step three"
+          ></button>
         </div>
       </div>
     </main>
