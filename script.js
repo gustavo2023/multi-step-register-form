@@ -107,7 +107,7 @@ continueBtn.addEventListener("click", (event) => {
   }
 
   if (currentStep === 3) {
-    alert("Thanks for your submission!");
+    alert("Success!");
     window.location.reload();
     return;
   }
