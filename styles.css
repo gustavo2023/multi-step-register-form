@@ -161,15 +161,13 @@ form {
   gap: 2.5rem;
 }
 
-.step.one,
-.step.two {
-  display: none;
-}
-
 h2 {
   color: var(--light-gray-three);
   font-size: var(--heading-size);
   font-weight: 400;
+}
+
+h2:not(:first-child) {
   margin-left: 1rem;
 }
 
@@ -318,6 +316,8 @@ h2 {
   height: 0.65rem;
   border-radius: 50%;
   background-color: var(--dark-gray-two);
+  border: none;
+  cursor: pointer;
 }
 
 .active-circle {
